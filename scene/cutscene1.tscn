@@ -66,7 +66,7 @@ offset_top = 815.0
 offset_right = 1422.0
 offset_bottom = 860.0
 theme_override_font_sizes/font_size = 31
-text = "เว้นแต่ว่ามีช้างตัวหนึ่งดูท่าทางแปลกๆ"
+text = "เว้นแต่ว่ามีกวางตัวหนึ่งดูท่าทางแปลกๆ"
 horizontal_alignment = 1
 
 [node name="Label5" type="Label" parent="."]
