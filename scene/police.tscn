@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://h6r8fevibi5r"]
+[gd_scene load_steps=14 format=3 uid="uid://h6r8fevibi5r"]
 
 [ext_resource type="Script" path="res://gdscript/police.gd" id="1_j7mdt"]
 [ext_resource type="Texture2D" uid="uid://dlwxlmosj2usg" path="res://Officer_sheet_boxed_0.png" id="2_06een"]
@@ -68,6 +68,15 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_p2j3l"]
 radius = 91.0
 
+[sub_resource type="LabelSettings" id="LabelSettings_ugk2u"]
+shadow_size = 20
+shadow_color = Color(0.0823529, 0.00392157, 0, 0.780392)
+
+[sub_resource type="LabelSettings" id="LabelSettings_jm6e8"]
+font_size = 14
+font_color = Color(0, 0, 0, 1)
+outline_size = 15
+
 [node name="pilicee" type="CharacterBody2D"]
 script = ExtResource("1_j7mdt")
 
@@ -88,14 +97,20 @@ offset_top = -17.0
 offset_right = 40.0
 offset_bottom = 9.0
 text = "PRESS  'E'"
+label_settings = SubResource("LabelSettings_ugk2u")
 
 [node name="say" type="Label" parent="."]
-offset_left = -323.0
-offset_top = -131.0
-offset_right = 147.0
-offset_bottom = -105.0
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 70.0
+grow_horizontal = 2
 scale = Vector2(1.36348, 1.75219)
-text = "เฮ้ คุณตอนกลางคืนแถวนี้มันอันตรายมากนะ ไห้ผมไปกับคุณหมอดีกว่า"
+text = "เฮ้ คุณตอนกลางคืน
+แถวนี้มันอันตรายมากนะ 
+ไห้ผมไปกับคุณหมอดีกว่า"
+label_settings = SubResource("LabelSettings_jm6e8")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://obcqpa63lyn2"]
+[gd_scene load_steps=21 format=3 uid="uid://obcqpa63lyn2"]
 
 [ext_resource type="Script" path="res://gdscript/world.gd" id="1_vt7cm"]
 [ext_resource type="PackedScene" uid="uid://cxhskxp0dc6j" path="res://scene/player.tscn" id="2_f164l"]
@@ -28,8 +28,28 @@ func _process(delta):
 [sub_resource type="CircleShape2D" id="CircleShape2D_4wf57"]
 radius = 48.3639
 
+[sub_resource type="LabelSettings" id="LabelSettings_0pkq0"]
+font_size = 11
+font_color = Color(0, 0, 0, 1)
+outline_size = 6
+
+[sub_resource type="LabelSettings" id="LabelSettings_lah8r"]
+font_size = 11
+font_color = Color(0, 0, 0, 1)
+outline_size = 6
+
+[sub_resource type="LabelSettings" id="LabelSettings_2jy1o"]
+font_size = 11
+font_color = Color(0, 0, 0, 1)
+outline_size = 6
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_5r8tv"]
 radius = 868.564
+
+[sub_resource type="LabelSettings" id="LabelSettings_5klsf"]
+font_size = 75
+outline_size = 25
+outline_color = Color(1, 0.556863, 0.498039, 1)
 
 [sub_resource type="Gradient" id="Gradient_2aeu4"]
 
@@ -70,8 +90,11 @@ offset_top = 143.262
 offset_right = 238.12
 offset_bottom = 169.262
 scale = Vector2(0.794508, 0.832979)
-theme_override_font_sizes/font_size = 13
+theme_override_font_sizes/font_size = 12
 text = "Press E"
+label_settings = SubResource("LabelSettings_0pkq0")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="text2" type="Label" parent="TileMap/cage"]
 offset_left = 145.965
@@ -79,7 +102,11 @@ offset_top = 138.766
 offset_right = 304.965
 offset_bottom = 164.766
 scale = Vector2(0.722974, 0.889108)
-text = "ช้างตัวนี้อาการหนักจริงๆ"
+text = "ช้างตัวนี้
+อาการหนักจริงๆ"
+label_settings = SubResource("LabelSettings_lah8r")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="text3" type="Label" parent="TileMap/cage"]
 offset_left = 105.272
@@ -87,7 +114,12 @@ offset_top = 140.864
 offset_right = 397.272
 offset_bottom = 166.864
 scale = Vector2(0.75136, 0.800794)
-text = "ผมไปเอายาไห้ช้างแปปนึงนะครับ คุณตำรวจ"
+text = "ผมไปเอายา
+ไห้ช้างแปปนึงนะครับ 
+คุณตำรวจ"
+label_settings = SubResource("LabelSettings_2jy1o")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="drbag" type="Sprite2D" parent="TileMap/cage"]
 position = Vector2(-736.313, -23.6772)
@@ -107,8 +139,9 @@ offset_top = -120.195
 offset_right = -30.6989
 offset_bottom = -16.1948
 scale = Vector2(2.46868, 2.26087)
-theme_override_font_sizes/font_size = 73
+theme_override_font_sizes/font_size = 500
 text = "Pick"
+label_settings = SubResource("LabelSettings_5klsf")
 
 [node name="pilicee" parent="." instance=ExtResource("9_kv4kb")]
 top_level = true
