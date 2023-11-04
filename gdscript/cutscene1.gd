@@ -47,4 +47,4 @@ func _process(_delta):
 		
 		
 	elif Input.is_action_just_pressed('enter') and duh ==4:
-			get_tree().change_scene_to_file("res://world.tscn")
+			get_tree().change_scene_to_file("res://scene/world.tscn")
