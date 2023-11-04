@@ -2,7 +2,7 @@ extends CharacterBody2D
 class_name playerr
 @onready var animation = $AnimationPlayer
 
-@export var speed = 300
+@export var speed = 2000
 
 func handleinput():
 	if Global.canwalk:

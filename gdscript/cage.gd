@@ -18,6 +18,7 @@ func _physics_process(_delta):
 		text1.hide()
 		text2.show()
 		Global.playerfow = false
+		print('BRUHHH')
 		duh += 1
 	elif Input.is_action_just_pressed('pressE') and duh ==1:
 		text2.hide()
@@ -25,6 +26,9 @@ func _physics_process(_delta):
 		duh+=1
 	elif Input.is_action_just_pressed('pressE') and duh ==2:
 		text3.hide()
+		Global.seebag = true
+		print('Gaymai')
+		duh+=1
 		
 		
 

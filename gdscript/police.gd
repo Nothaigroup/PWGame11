@@ -21,11 +21,12 @@ func _physics_process(_delta):
 		labell.hide()
 		said.hide()
 		Global.playerfow = true
+		scene+=1
 	if Global.playerfow:
-		velocity = (global_position.direction_to(playerrr.global_position))*speed
+		var direction = global_position.direction_to(playerrr.global_position)
+		velocity = direction*speed
 	elif Global.playerfow == false:
-		pass
-		
+		velocity = Vector2(0,0)
 	if velocity.length() !=0:
 		anima.play('right')
 	else:
