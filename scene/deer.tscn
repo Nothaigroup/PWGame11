@@ -1,0 +1,61 @@
+[gd_scene load_steps=9 format=3 uid="uid://4wia164jlx4e"]
+
+[ext_resource type="Texture2D" uid="uid://drl1mhktp3f8l" path="res://MiniDeer2.png" id="1_dp32x"]
+[ext_resource type="Script" path="res://gdscript/deer.gd" id="1_kr4dx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6qx12"]
+atlas = ExtResource("1_dp32x")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ldof2"]
+atlas = ExtResource("1_dp32x")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8yrqj"]
+atlas = ExtResource("1_dp32x")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d1flw"]
+atlas = ExtResource("1_dp32x")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0ygek"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6qx12")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ldof2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8yrqj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d1flw")
+}],
+"loop": true,
+"name": &"deerwalk",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q6wt7"]
+radius = 126.115
+
+[node name="deer" type="CharacterBody2D"]
+script = ExtResource("1_kr4dx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(3, 2)
+scale = Vector2(-12.5272, 12.5573)
+sprite_frames = SubResource("SpriteFrames_0ygek")
+animation = &"deerwalk"
+frame_progress = 0.0837233
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(5, 93)
+shape = SubResource("CircleShape2D_q6wt7")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

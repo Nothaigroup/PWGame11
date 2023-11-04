@@ -2,12 +2,14 @@ extends CharacterBody2D
 class_name playerr
 @onready var animation = $AnimationPlayer
 
-@export var speed = 1500
+@export var speed = Global.speed
 
 func handleinput():
 	if Global.canwalk:
 		var movedirection = Input.get_vector("ui_left","ui_right","ui_up","ui_down")
 		velocity = movedirection * speed
+	elif Global.canwalk == false:
+		velocity = Vector2(0,0)
 
 func updateanimation():
 	if velocity.length() ==0:

@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://cqmvdn7u5xhqv"]
+
+[ext_resource type="Script" path="res://gdscript/skinwalker.gd" id="1_hso1c"]
+[ext_resource type="Texture2D" uid="uid://c37c8hdjv233j" path="res://scene/skin_walker_sheet.png" id="1_t48kn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1voud"]
+atlas = ExtResource("1_t48kn")
+region = Rect2(353, 303, 333, 303)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apdui"]
+atlas = ExtResource("1_t48kn")
+region = Rect2(0, 606, 333, 303)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_68p04"]
+atlas = ExtResource("1_t48kn")
+region = Rect2(353, 606, 333, 303)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_npe3c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1voud")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_apdui")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_68p04")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="skinwalker" type="CharacterBody2D"]
+script = ExtResource("1_hso1c")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_npe3c")
+frame_progress = 0.214551

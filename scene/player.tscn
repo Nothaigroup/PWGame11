@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cxhskxp0dc6j"]
+[gd_scene load_steps=11 format=3 uid="uid://2m1bctwsuly7"]
 
 [ext_resource type="Script" path="res://gdscript/player.gd" id="1_hb33h"]
 [ext_resource type="Texture2D" uid="uid://dlmuphyti5bd4" path="res://sungte-sheet-png.png" id="2_hy45w"]

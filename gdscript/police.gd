@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-@export var speed = 150
+@export var speed = 270
 @onready var playerrr = get_tree().get_first_node_in_group('lol')
 @onready var labell = $press_e
 @onready var said = $say
