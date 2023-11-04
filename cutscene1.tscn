@@ -1,0 +1,81 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfty70y10quub"]
+
+[ext_resource type="Texture2D" uid="uid://dih625vcbdono" path="res://TilesetGrass/plain-black-background-02fh7564l8qq4m6d.jpg" id="1_gv065"]
+[ext_resource type="Script" path="res://cutscene1.gd" id="1_m8wun"]
+[ext_resource type="Texture2D" uid="uid://btifyh6hqtuh6" path="res://whimsical-circus-digital-art-illustration-generative-ai-photo.jpeg" id="3_71jd1"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m8wun")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_gv065")
+
+[node name="Label1" type="Label" parent="."]
+layout_mode = 0
+offset_left = 267.0
+offset_top = 485.0
+offset_right = 1699.0
+offset_bottom = 532.0
+theme_override_font_sizes/font_size = 31
+text = "ผมชื่อซังเตผมเป็นสัตว์เเพทย์ของคณะละครสัตว์เจ้าหนึ่ง และวันนี้คณะละครของผมต้องไปจัดแสดงที่ป่าที่ชื่อว่า..."
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 809.0
+offset_top = 465.0
+offset_right = 1087.0
+offset_bottom = 545.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 56
+text = "Pale wood"
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 507.0
+offset_top = 258.0
+offset_right = 4891.0
+offset_bottom = 2820.0
+scale = Vector2(0.193433, 0.17877)
+texture = ExtResource("3_71jd1")
+
+[node name="Label3" type="Label" parent="."]
+top_level = true
+layout_mode = 0
+offset_left = 425.0
+offset_top = 815.0
+offset_right = 1443.0
+offset_bottom = 860.0
+theme_override_font_sizes/font_size = 31
+text = "งานแสดงวันนี้เป็นไปได้ด้วยดี"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="."]
+top_level = true
+layout_mode = 0
+offset_left = 404.0
+offset_top = 815.0
+offset_right = 1422.0
+offset_bottom = 860.0
+theme_override_font_sizes/font_size = 31
+text = "เว้นแต่ว่ามีช้างตัวหนึ่งดูท่าทางแปลกๆ"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="."]
+top_level = true
+layout_mode = 0
+offset_left = 429.0
+offset_top = 507.0
+offset_right = 1447.0
+offset_bottom = 554.0
+theme_override_font_sizes/font_size = 44
+text = "คืนนี้ผมคงต้องไปดูเจ้าช้างตัวนั้นหน่อยแล้ว..."
+horizontal_alignment = 1
