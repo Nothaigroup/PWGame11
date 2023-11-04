@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://2m1bctwsuly7"]
+[gd_scene load_steps=5 format=3 uid="uid://2m1bctwsuly7"]
 
 [ext_resource type="Script" path="res://gdscript/player.gd" id="1_hb33h"]
 [ext_resource type="Texture2D" uid="uid://dyxjmy6hni2ry" path="res://icon.svg" id="1_taykd"]
+[ext_resource type="PackedScene" uid="uid://dgagtd7lvgb4b" path="res://pause_menu.tscn" id="3_oavt4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nsih1"]
 size = Vector2(128, 128)
@@ -17,3 +18,10 @@ texture = ExtResource("1_taykd")
 shape = SubResource("RectangleShape2D_nsih1")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="PauseMenu" parent="." instance=ExtResource("3_oavt4")]
+visible = false
+offset_left = -962.0
+offset_top = -535.0
+offset_right = -962.0
+offset_bottom = -535.0
