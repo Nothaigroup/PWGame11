@@ -22,6 +22,8 @@ func _physics_process(_delta):
 	if Input.is_action_just_pressed("pressE") and canpick:
 		Global.seebag = false
 		print('PickfkingBAGG')
+		Global.policedead = true
+		Global.seeblood = true
 	if Global.seebag:
 		self.visible = true
 	if Global.seebag==false:

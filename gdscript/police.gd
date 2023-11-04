@@ -31,6 +31,9 @@ func _physics_process(_delta):
 		anima.play('right')
 	else:
 		anima.stop()
+		
+	if Global.policedead:
+		self.queue_free()
 	move_and_slide()
 
 
