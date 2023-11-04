@@ -10,7 +10,7 @@ func set_is_paused(value):
 func _unhandled_input(event):
 	if event.is_action_pressed("resume"):
 		set_is_paused(!is_paused)
-
+		self.visible
 
 
 
