@@ -1,0 +1,94 @@
+[gd_scene load_steps=12 format=3 uid="uid://h6r8fevibi5r"]
+
+[ext_resource type="Texture2D" uid="uid://cicru2k8ky6cq" path="res://TilesetGrass/Officer_sheet_boxed_0.png" id="1_70030"]
+[ext_resource type="Script" path="res://gdscript/police.gd" id="1_j7mdt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dbfxn"]
+atlas = ExtResource("1_70030")
+region = Rect2(1, 33, 28, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mlqor"]
+atlas = ExtResource("1_70030")
+region = Rect2(33, 33, 28, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uc3v1"]
+atlas = ExtResource("1_70030")
+region = Rect2(65, 33, 28, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wsofa"]
+atlas = ExtResource("1_70030")
+region = Rect2(97, 33, 28, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oeyt6"]
+atlas = ExtResource("1_70030")
+region = Rect2(129, 33, 28, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wardy"]
+atlas = ExtResource("1_70030")
+region = Rect2(161, 33, 28, 30)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hcoiq"]
+atlas = ExtResource("1_70030")
+region = Rect2(193, 33, 28, 30)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x7mvy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dbfxn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mlqor")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uc3v1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wsofa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oeyt6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wardy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hcoiq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p2j3l"]
+radius = 91.0
+
+[node name="pilicee" type="CharacterBody2D"]
+script = ExtResource("1_j7mdt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2.21429, 2.2)
+sprite_frames = SubResource("SpriteFrames_x7mvy")
+frame_progress = 0.711604
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_p2j3l")
+
+[node name="press_e" type="Label" parent="."]
+offset_left = -32.0
+offset_top = -17.0
+offset_right = 40.0
+offset_bottom = 9.0
+text = "PRESS  'E'"
+
+[node name="say" type="Label" parent="."]
+offset_left = -217.0
+offset_top = -64.0
+offset_right = 253.0
+offset_bottom = -38.0
+text = "เฮ้ คุณตอนกลางคืนแถวนี้มันอันตรายมากนะ ไห้ผมไปกับคุณหมอดีกว่า"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

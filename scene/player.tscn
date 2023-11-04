@@ -1,14 +1,14 @@
 [gd_scene load_steps=4 format=3 uid="uid://2m1bctwsuly7"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_5cb1i"]
+[ext_resource type="Script" path="res://gdscript/player.gd" id="1_hb33h"]
 [ext_resource type="Texture2D" uid="uid://dyxjmy6hni2ry" path="res://icon.svg" id="1_taykd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nsih1"]
 size = Vector2(128, 128)
 
-[node name="player" type="CharacterBody2D"]
+[node name="player" type="CharacterBody2D" groups=["lol"]]
 top_level = true
-script = ExtResource("1_5cb1i")
+script = ExtResource("1_hb33h")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_taykd")

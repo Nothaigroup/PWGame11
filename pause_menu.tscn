@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdfbwb17sxwt7"]
+
+[ext_resource type="Script" path="res://pause_menu.gd" id="1_y2dgm"]
+
+[sub_resource type="SystemFont" id="SystemFont_y2ykq"]
+font_names = PackedStringArray("Impact")
+
+[node name="PauseMenu" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y2dgm")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1923.0
+offset_bottom = 1075.0
+color = Color(1, 1, 1, 0.278431)
+
+[node name="Resume" type="Button" parent="."]
+layout_mode = 0
+offset_left = 609.0
+offset_top = 577.0
+offset_right = 1250.0
+offset_bottom = 785.0
+theme_override_fonts/font = SubResource("SystemFont_y2ykq")
+theme_override_font_sizes/font_size = 100
+text = "EXIT"
+
+[node name="ExitButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 609.0
+offset_top = 313.0
+offset_right = 1250.0
+offset_bottom = 521.0
+theme_override_fonts/font = SubResource("SystemFont_y2ykq")
+theme_override_font_sizes/font_size = 100
+text = "RESUME"
+
+[connection signal="pressed" from="Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
