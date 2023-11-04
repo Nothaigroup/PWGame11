@@ -49,6 +49,7 @@ adjustment_color_correction = SubResource("GradientTexture2D_w2s5r")
 script = ExtResource("1_vt7cm")
 
 [node name="TileMap" parent="." instance=ExtResource("4_sur1x")]
+texture_filter = 1
 position = Vector2(2420, 123)
 layer_0/z_index = 0
 layer_2/z_index = 0
@@ -111,6 +112,7 @@ text = "Pick"
 
 [node name="pilicee" parent="." instance=ExtResource("9_kv4kb")]
 top_level = true
+texture_filter = 1
 position = Vector2(1339, 444)
 
 [node name="player" parent="." instance=ExtResource("2_f164l")]
