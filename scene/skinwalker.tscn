@@ -1,7 +1,14 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=7 format=3 uid="uid://cqmvdn7u5xhqv"]
 
 [ext_resource type="Script" path="res://gdscript/skinwalker.gd" id="1_hso1c"]
 [ext_resource type="Texture2D" uid="uid://c37c8hdjv233j" path="res://scene/skin_walker_sheet.png" id="1_t48kn"]
+=======
+[gd_scene load_steps=7 format=3 uid="uid://cq7ehj0tcu4mt"]
+
+[ext_resource type="Script" path="res://gdscript/skinwalker.gd" id="1_hso1c"]
+[ext_resource type="Texture2D" path="res://scene/skin_walker_sheet.png" id="1_t48kn"]
+>>>>>>> Stashed changes
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1voud"]
 atlas = ExtResource("1_t48kn")
@@ -37,4 +44,8 @@ script = ExtResource("1_hso1c")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_npe3c")
+<<<<<<< Updated upstream
 frame_progress = 0.214551
+=======
+frame_progress = 0.920201
+>>>>>>> Stashed changes

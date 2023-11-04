@@ -1,6 +1,12 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=9 format=3 uid="uid://4wia164jlx4e"]
 
 [ext_resource type="Texture2D" uid="uid://drl1mhktp3f8l" path="res://MiniDeer2.png" id="1_dp32x"]
+=======
+[gd_scene load_steps=9 format=3 uid="uid://hcr6w30w4bd"]
+
+[ext_resource type="Texture2D" path="res://MiniDeer2.png" id="1_dp32x"]
+>>>>>>> Stashed changes
 [ext_resource type="Script" path="res://gdscript/deer.gd" id="1_kr4dx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6qx12"]
@@ -50,7 +56,11 @@ position = Vector2(3, 2)
 scale = Vector2(-12.5272, 12.5573)
 sprite_frames = SubResource("SpriteFrames_0ygek")
 animation = &"deerwalk"
+<<<<<<< Updated upstream
 frame_progress = 0.0837233
+=======
+frame_progress = 0.621914
+>>>>>>> Stashed changes
 
 [node name="Area2D" type="Area2D" parent="."]
 
