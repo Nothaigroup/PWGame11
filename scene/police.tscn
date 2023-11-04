@@ -1,62 +1,67 @@
 [gd_scene load_steps=12 format=3 uid="uid://h6r8fevibi5r"]
 
-[ext_resource type="Texture2D" uid="uid://cicru2k8ky6cq" path="res://TilesetGrass/Officer_sheet_boxed_0.png" id="1_70030"]
 [ext_resource type="Script" path="res://gdscript/police.gd" id="1_j7mdt"]
+[ext_resource type="Texture2D" uid="uid://dlwxlmosj2usg" path="res://Officer_sheet_boxed_0.png" id="2_06een"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dbfxn"]
-atlas = ExtResource("1_70030")
-region = Rect2(1, 33, 28, 30)
+[sub_resource type="AtlasTexture" id="AtlasTexture_26ypd"]
+atlas = ExtResource("2_06een")
+region = Rect2(2, 34, 28, 28)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mlqor"]
-atlas = ExtResource("1_70030")
-region = Rect2(33, 33, 28, 30)
+[sub_resource type="AtlasTexture" id="AtlasTexture_a86hx"]
+atlas = ExtResource("2_06een")
+region = Rect2(34, 34, 28, 28)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_uc3v1"]
-atlas = ExtResource("1_70030")
-region = Rect2(65, 33, 28, 30)
+[sub_resource type="AtlasTexture" id="AtlasTexture_udqx4"]
+atlas = ExtResource("2_06een")
+region = Rect2(66, 34, 28, 28)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wsofa"]
-atlas = ExtResource("1_70030")
-region = Rect2(97, 33, 28, 30)
+[sub_resource type="AtlasTexture" id="AtlasTexture_tovh2"]
+atlas = ExtResource("2_06een")
+region = Rect2(98, 34, 28, 28)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_oeyt6"]
-atlas = ExtResource("1_70030")
-region = Rect2(129, 33, 28, 30)
+[sub_resource type="AtlasTexture" id="AtlasTexture_n4fgc"]
+atlas = ExtResource("2_06een")
+region = Rect2(130, 34, 28, 28)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wardy"]
-atlas = ExtResource("1_70030")
-region = Rect2(161, 33, 28, 30)
+[sub_resource type="AtlasTexture" id="AtlasTexture_53hwi"]
+atlas = ExtResource("2_06een")
+region = Rect2(162, 34, 28, 28)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hcoiq"]
-atlas = ExtResource("1_70030")
-region = Rect2(193, 33, 28, 30)
+[sub_resource type="AtlasTexture" id="AtlasTexture_wxw1e"]
+atlas = ExtResource("2_06een")
+region = Rect2(194, 34, 28, 28)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_x7mvy"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_ccmqj"]
 animations = [{
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_dbfxn")
+"texture": SubResource("AtlasTexture_26ypd")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_mlqor")
+"texture": SubResource("AtlasTexture_a86hx")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_uc3v1")
+"texture": SubResource("AtlasTexture_udqx4")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wsofa")
+"texture": SubResource("AtlasTexture_tovh2")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_oeyt6")
+"texture": SubResource("AtlasTexture_n4fgc")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wardy")
+"texture": SubResource("AtlasTexture_53hwi")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hcoiq")
+"texture": SubResource("AtlasTexture_wxw1e")
 }],
 "loop": true,
-"name": &"default",
+"name": &"right",
 "speed": 5.0
 }]
 
@@ -67,9 +72,10 @@ radius = 91.0
 script = ExtResource("1_j7mdt")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(2.21429, 2.2)
-sprite_frames = SubResource("SpriteFrames_x7mvy")
-frame_progress = 0.711604
+position = Vector2(0, 1)
+scale = Vector2(3.94405, 4.35591)
+sprite_frames = SubResource("SpriteFrames_ccmqj")
+animation = &"right"
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -84,10 +90,11 @@ offset_bottom = 9.0
 text = "PRESS  'E'"
 
 [node name="say" type="Label" parent="."]
-offset_left = -217.0
-offset_top = -64.0
-offset_right = 253.0
-offset_bottom = -38.0
+offset_left = -323.0
+offset_top = -131.0
+offset_right = 147.0
+offset_bottom = -105.0
+scale = Vector2(1.36348, 1.75219)
 text = "เฮ้ คุณตอนกลางคืนแถวนี้มันอันตรายมากนะ ไห้ผมไปกับคุณหมอดีกว่า"
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -6,3 +6,4 @@ var paused = false
 
 func _process(delta):
 	pass
+

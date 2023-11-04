@@ -5,6 +5,7 @@ extends CharacterBody2D
 @onready var playerrr = get_tree().get_first_node_in_group('lol')
 @onready var labell = $press_e
 @onready var said = $say
+@onready var anima = $AnimatedSprite2D
 var canpress = false
 var scene = 0
 
@@ -14,7 +15,6 @@ func _ready():
 
 func _physics_process(_delta):
 	if Input.is_action_just_pressed('pressE') and canpress ==true and scene ==0:
-		print('Lmao')
 		said.show()
 		scene +=1
 	elif Input.is_action_just_pressed('pressE') and scene ==1:
@@ -23,6 +23,13 @@ func _physics_process(_delta):
 		Global.playerfow = true
 	if Global.playerfow:
 		velocity = (global_position.direction_to(playerrr.global_position))*speed
+	elif Global.playerfow == false:
+		pass
+		
+	if velocity.length() !=0:
+		anima.play('right')
+	else:
+		anima.stop()
 	move_and_slide()
 
 

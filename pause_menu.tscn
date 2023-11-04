@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://cdfbwb17sxwt7"]
+[gd_scene load_steps=3 format=3 uid="uid://dgagtd7lvgb4b"]
 
 [ext_resource type="Script" path="res://pause_menu.gd" id="1_y2dgm"]
 
@@ -6,7 +6,6 @@
 font_names = PackedStringArray("Impact")
 
 [node name="PauseMenu" type="Control"]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

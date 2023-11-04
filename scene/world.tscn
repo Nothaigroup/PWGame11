@@ -1,9 +1,27 @@
-[gd_scene load_steps=5 format=3 uid="uid://obcqpa63lyn2"]
+[gd_scene load_steps=8 format=3 uid="uid://obcqpa63lyn2"]
 
 [ext_resource type="Script" path="res://gdscript/world.gd" id="1_vt7cm"]
 [ext_resource type="PackedScene" uid="uid://2m1bctwsuly7" path="res://scene/player.tscn" id="2_f164l"]
+[ext_resource type="Script" path="res://gdscript/cage.gd" id="3_y7qw8"]
 [ext_resource type="PackedScene" uid="uid://dalymbajy3htb" path="res://tile_map.tscn" id="4_sur1x"]
 [ext_resource type="PackedScene" uid="uid://h6r8fevibi5r" path="res://scene/police.tscn" id="9_kv4kb"]
+
+[sub_resource type="GDScript" id="GDScript_ofqej"]
+script/source = "extends TileMap
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4wf57"]
+radius = 48.3639
 
 [node name="mainScene" type="Node2D"]
 script = ExtResource("1_vt7cm")
@@ -14,9 +32,47 @@ layer_0/z_index = 0
 layer_2/z_index = 0
 layer_3/z_index = 0
 layer_4/z_index = 0
+script = SubResource("GDScript_ofqej")
+
+[node name="cage" type="Area2D" parent="TileMap"]
+scale = Vector2(1, 1)
+script = ExtResource("3_y7qw8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/cage"]
+position = Vector2(200.813, 150.455)
+scale = Vector2(1, 1)
+shape = SubResource("CircleShape2D_4wf57")
+
+[node name="text1" type="Label" parent="TileMap/cage"]
+offset_left = 183.12
+offset_top = 143.262
+offset_right = 238.12
+offset_bottom = 169.262
+scale = Vector2(0.794508, 0.832979)
+theme_override_font_sizes/font_size = 13
+text = "Press E"
+
+[node name="text2" type="Label" parent="TileMap/cage"]
+offset_left = 145.965
+offset_top = 138.766
+offset_right = 304.965
+offset_bottom = 164.766
+scale = Vector2(0.722974, 0.889108)
+text = "ช้างตัวนี้อาการหนักจริงๆ"
+
+[node name="text3" type="Label" parent="TileMap/cage"]
+offset_left = 105.272
+offset_top = 140.864
+offset_right = 397.272
+offset_bottom = 166.864
+scale = Vector2(0.75136, 0.800794)
+text = "ผมไปเอายาไห้ช้างแปปนึงนะครับ คุณตำรวจ"
 
 [node name="pilicee" parent="." instance=ExtResource("9_kv4kb")]
 top_level = true
 position = Vector2(1339, 444)
 
 [node name="player" parent="." instance=ExtResource("2_f164l")]
+
+[connection signal="body_entered" from="TileMap/cage" to="TileMap/cage" method="_on_body_entered"]
+[connection signal="body_exited" from="TileMap/cage" to="TileMap/cage" method="_on_body_exited"]
